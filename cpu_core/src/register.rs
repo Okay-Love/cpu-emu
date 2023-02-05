@@ -4,6 +4,12 @@ pub struct Register<T: Sized> {
 }
 
 impl<T: Sized> Register<T>{
+    pub fn new(A: Option<T>, B: Option<T>) -> Self{
+        Register{
+            A,
+            B,
+        }
+    }
     pub fn register_a(&self) -> &Option<T>{
         &self.A
     }
